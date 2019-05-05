@@ -1,0 +1,10 @@
+.container {
+  height: auto;
+  padding: 65px;
+  width: 100%;
+}
+
+.innerCard {
+  color: white;
+  text-shadow: 1px 1px black;
+}

@@ -6,6 +6,24 @@
   margin-left: 40%;
   float: none;
   clear: none;
-  background-color: red;
-  height: 100vh;
+}
+
+.teal {
+  background-color: #92e8d3;
+}
+
+.mediumPurple {
+  background-color: rgb(84, 41, 148);
+}
+
+.brightRed {
+  background-color: #f9003c;
+}
+
+.beige {
+  background-color: #ffcf84;
+}
+
+.mediumBlue {
+  background-color: #009ee2;
 }
