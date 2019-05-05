@@ -1,0 +1,62 @@
+.container {
+  position: fixed;
+  width: 40%;
+  height: 100%;
+  background-color: #fafafa;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fafafa),
+    to(#fafafa)
+  );
+  background-image: linear-gradient(180deg, #fafafa, #fafafa);
+}
+
+.about {
+  position: absolute;
+  left: 85px;
+  right: 0px;
+  bottom: 15%;
+  width: 65%;
+  font-style: "Montserrat";
+  color: #333333;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.linkText {
+  font-size: 21px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: 1vh 0vw;
+  transition: all 0.2s ease-in-out;
+  /* line-height: 0; */
+}
+
+.linkable:hover {
+  color: rgb(119, 101, 255);
+  cursor: pointer;
+}
+
+.icon {
+  padding-right: 0.75vw;
+  font-size: 30px;
+  line-height: 0;
+}
+
+.name {
+  padding-bottom: 1vh;
+}
