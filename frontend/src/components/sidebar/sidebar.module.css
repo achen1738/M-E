@@ -17,7 +17,7 @@
   position: absolute;
   left: 85px;
   right: 0px;
-  bottom: 15%;
+  bottom: 25%;
   width: 65%;
   font-style: "Montserrat";
   color: #333333;
@@ -33,17 +33,20 @@
 }
 
 .linkText {
-  font-size: 21px;
-  font-weight: 400;
+  font-weight: bold;
+  text-transform: uppercase;
   vertical-align: middle;
+  font-size: 26px;
+  line-height: 42px;
 }
 
 .link {
   display: flex;
   align-items: center;
-  padding: 1vh 0vw;
+  padding: 0.5vh 0vw;
   transition: all 0.2s ease-in-out;
   /* line-height: 0; */
+  color: #4a4a4a;
 }
 
 .linkable:hover {
@@ -51,10 +54,17 @@
   cursor: pointer;
 }
 
+.smallIcon {
+  font-size: 35px;
+}
+
 .icon {
   padding-right: 0.75vw;
-  font-size: 30px;
   line-height: 0;
+}
+
+.bigIcon {
+  font-size: 40px;
 }
 
 .name {

@@ -12,32 +12,36 @@ class SideBar extends Component {
           <div className={styles.links}>
             <a
               href={Resume}
-              style={{ width: "110px" }}
+              style={{ width: "150px" }}
               className={[styles.link, styles.linkable].join(" ")}
               download
             >
-              <FaFileAlt className={styles.icon} />
+              <FaFileAlt
+                className={[styles.icon, styles.smallIcon].join(" ")}
+              />
               <span className={styles.linkText}>resume</span>
             </a>
 
             <div className={styles.link}>
-              <FaMobileAlt className={styles.icon} />
+              <FaMobileAlt
+                className={[styles.icon, styles.smallIcon].join(" ")}
+              />
               <span className={styles.linkText}>516-506-1738</span>
             </div>
 
             <div className={styles.link}>
-              <FaEnvelope className={styles.icon} />
+              <FaEnvelope className={[styles.icon, styles.bigIcon].join(" ")} />
               <span className={styles.linkText}>ac99@rice.edu</span>
             </div>
 
             <a
               href="https://www.github.com/achen1738"
-              style={{ width: "290px" }}
+              style={{ width: "400px" }}
               className={[styles.link, styles.linkable].join(" ")}
               rel="noopener noreferrer"
               target="_blank"
             >
-              <FaGithub className={styles.icon} />
+              <FaGithub className={[styles.icon, styles.bigIcon].join(" ")} />
               <span className={styles.linkText}>github.com/achen1738</span>
             </a>
           </div>

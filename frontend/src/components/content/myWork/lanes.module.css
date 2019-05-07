@@ -1,0 +1,26 @@
+.gif {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.gif > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2vh;
+}
+
+.githubLink {
+  position: absolute;
+  bottom: 1.75vh;
+  left: 1vw;
+  z-index: 1;
+  font-size: 20px;
+  color: white;
+  transition: all 0.15s ease-in;
+}
+
+.githubLink:hover {
+  color: #a1ffee;
+  opacity: 1;
+}

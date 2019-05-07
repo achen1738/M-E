@@ -6,7 +6,7 @@ class InnerCard extends Component {
     return (
       <div className={styles.innerCard}>
         <div className={styles.numWork}>{this.props.numWork}</div>
-        <div className={styles.image} />
+        {this.props.content}
         <div className={styles.description}>{this.props.description}</div>
       </div>
     );

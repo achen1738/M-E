@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styles from "./content.module.css";
 import OuterCard from "./myWork/outerCard";
+import Research from "./myWork/research";
+import Lanes from "./myWork/lanes";
 
 class Content extends Component {
   state = {};
@@ -14,8 +16,9 @@ class Content extends Component {
         />
         <OuterCard
           color={styles.mediumPurple}
-          numWork={".01"}
-          description={"Research and Publications"}
+          numWork={".01 - Research and Publications"}
+          content={<Research />}
+          description={"Materials Science Research at Stony Brook University"}
         />
         <OuterCard
           color={styles.beige}
@@ -24,8 +27,11 @@ class Content extends Component {
         />
         <OuterCard
           color={styles.mediumBlue}
-          numWork={".03"}
-          description={"Lanes.gg"}
+          numWork={".03 - Lanes.gg (Not Hosted)"}
+          content={<Lanes />}
+          description={
+            "Data Analysis of Individual Matches for League of Legends."
+          }
         />
         <OuterCard
           color={styles.brightRed}
