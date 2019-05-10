@@ -17,7 +17,7 @@
   position: absolute;
   left: 85px;
   right: 0px;
-  bottom: 25%;
+  bottom: 20%;
   width: 65%;
   font-style: "Montserrat";
   color: #333333;
@@ -29,14 +29,14 @@
 }
 
 .description {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .linkText {
   font-weight: bold;
   text-transform: uppercase;
   vertical-align: middle;
-  font-size: 26px;
+  font-size: 23px;
   line-height: 42px;
 }
 

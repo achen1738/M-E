@@ -21,9 +21,22 @@
 }
 
 .beige {
-  background-color: #ffcf84;
+  background-color: #f4b93d;
 }
 
 .mediumBlue {
-  background-color: #009ee2;
+  background-color: #005ba9;
+}
+
+.lightPink {
+  background-color: #eabad8;
+}
+
+.black {
+  background-color: rgb(56, 55, 55);
+}
+
+.emailBtn {
+  padding: 2vh 2vw;
+  background-color: red;
 }

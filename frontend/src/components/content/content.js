@@ -3,6 +3,7 @@ import styles from "./content.module.css";
 import OuterCard from "./myWork/outerCard";
 import Research from "./myWork/research";
 import Lanes from "./myWork/lanes";
+import Meself from "./myWork/meself";
 
 class Content extends Component {
   state = {};
@@ -12,22 +13,24 @@ class Content extends Component {
         <OuterCard
           color={styles.teal}
           numWork={".00"}
+          content={<Meself />}
           description={"This is me."}
         />
         <OuterCard
+          color={styles.mediumBlue}
+          numWork={".02 - Work Experience"}
+          description={"Internships and Full-Time"}
+        />
+        <OuterCard
           color={styles.mediumPurple}
-          numWork={".01 - Research and Publications"}
+          numWork={".03 - Research and Publications"}
           content={<Research />}
           description={"Materials Science Research at Stony Brook University"}
         />
+
         <OuterCard
-          color={styles.beige}
-          numWork={".02"}
-          description={"IBM Summer 2019"}
-        />
-        <OuterCard
-          color={styles.mediumBlue}
-          numWork={".03 - Lanes.gg (Not Hosted)"}
+          color={styles.black}
+          numWork={".04 - Independent and School Projects"}
           content={<Lanes />}
           description={
             "Data Analysis of Individual Matches for League of Legends."
@@ -35,7 +38,7 @@ class Content extends Component {
         />
         <OuterCard
           color={styles.brightRed}
-          numWork={".05"}
+          //   numWork={".05"}
           description={"Kernel"}
         />
       </div>
