@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import GO from "../../../images/go.jpg";
-import SEM from "../../../images/sem.jpg";
-import Cells from "../../../images/cells.jpg";
+import GO from "../../../../images/go.jpg";
+import SEM from "../../../../images/sem.jpg";
+import Cells from "../../../../images/cells.jpg";
 import styles from "./research.module.css";
 import { FaInfoCircle, FaArrowRight } from "react-icons/fa";
 import ReactTooltip from "react-tooltip";

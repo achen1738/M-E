@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import styles from "./content.module.css";
 import OuterCard from "./myWork/outerCard";
-import Research from "./myWork/research";
-import Lanes from "./myWork/lanes";
-import Meself from "./myWork/meself";
+import Research from "./myWork/research/research";
+import Lanes from "./myWork/lanes/lanes";
+import Meself from "./myWork/meself/meself";
+import Skills from "./myWork/skills/skills";
 
 class Content extends Component {
   state = {};
@@ -12,9 +13,9 @@ class Content extends Component {
       <div className={styles.container}>
         <OuterCard
           color={styles.teal}
-          numWork={".00"}
-          content={<Meself />}
-          description={"This is me."}
+          numWork={".00 - Skills"}
+          content={<Skills />}
+          description={"Coding Languages and my Experience"}
         />
         <OuterCard
           color={styles.mediumBlue}

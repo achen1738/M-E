@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import After from "../../../files/newLane2.gif";
+import After from "../../../../files/newLane2.gif";
 import { FaGithub } from "react-icons/fa";
 import styles from "./lanes.module.css";
 
