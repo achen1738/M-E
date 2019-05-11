@@ -74,9 +74,68 @@ class Skills extends Component {
       false,
       false
     ],
-    content: [{}, {}]
-    // Java (fluent), C (fluent), T-SQL/Postgres (fluent), ReactJS (fluent), HTML (fluent),
-    // CSS (fluent), Javascript (fluent), Python (functional), NodeJS (functional), NoSQL (functional)
+    content: [
+      {
+        experience: [215, 310, 412],
+        lines: "5,000+"
+      },
+      {
+        experience: [321, 421],
+        lines: "10,000+"
+      },
+      {
+        experience: [410, "l.gg"],
+        lines: "10,000+"
+      },
+      {
+        experience: [330, 430, "l.gg"],
+        lines: "~1,000"
+      },
+      {
+        experience: ["l.gg"],
+        lines: "~5,000"
+      },
+      {
+        experience: [410, "l.gg"],
+        lines: "10,000+"
+      },
+      {
+        experience: [410, "l.gg"],
+        lines: "10,000+"
+      },
+      {
+        experience: [430, "l.gg"],
+        lines: "~1,000"
+      },
+      {
+        experience: [410],
+        lines: "~2,000"
+      },
+      {
+        experience: [430, "l.gg"],
+        lines: "~500"
+      },
+      {
+        experience: [140, 182],
+        lines: "~1000"
+      },
+      {
+        experience: ["l.gg"],
+        lines: "~500"
+      }
+    ]
+    // "Java",
+    // "C",
+    // "ReactJS",
+    // "T-SQL",
+    // "Javascript",
+    // "HTML5",
+    // "CSS3",
+    // "PostgreSQL",
+    // "Typescript",
+    // "NoSQL",
+    // "Python",
+    // "NodeJS"
   };
 
   setOpened = e => {
@@ -86,10 +145,34 @@ class Skills extends Component {
     this.setState({ opened: opened });
   };
 
+  renderExperience = index => {
+    return this.state.content[index].experience.map(exp => {
+      return (
+        <div className={[styles.class, this.state.colors[index]].join(" ")}>
+          {exp}
+        </div>
+      );
+    });
+  };
+
+  renderLines = index => {
+    return (
+      <div className={[styles.lines, this.state.colors[index]].join(" ")}>
+        Lines of Code: {this.state.content[index].lines}
+      </div>
+    );
+  };
+
   renderCards = () => {
     return this.state.text.map((text, index) => {
       let contentStyle = [styles.cardContent];
       if (this.state.opened[index]) contentStyle.push(styles.moved);
+
+      let headerStyle = [styles.cardHeader];
+      if (this.state.opened[index]) headerStyle.push(styles.expandedHeader);
+
+      let bodyStyle = [styles.cardBody];
+      if (this.state.opened[index]) bodyStyle.push(styles.shiftBody);
 
       return (
         <div
@@ -104,7 +187,7 @@ class Skills extends Component {
             ].join(" ")}
           />
           <div className={contentStyle.join(" ")}>
-            <div className={styles.cardHeader}>
+            <div className={headerStyle.join(" ")}>
               <div className={styles.cardInfo}>
                 <span className={[styles.cardText].join(" ")}>{text}</span>
                 <span className={styles.fluency}>
@@ -125,12 +208,18 @@ class Skills extends Component {
                 )}
               </div>
             </div>
-            <div className={styles.cardBody}>
-              <div className={styles.classes}>
-                <div className={styles.class}>215</div>
-                <div className={styles.class}>310</div>
-                <div className={styles.class}>412</div>
+            <div className={bodyStyle.join(" ")}>
+              <div
+                className={[styles.classHeader, this.state.colors[index]].join(
+                  " "
+                )}
+              >
+                Experience
               </div>
+              <div className={styles.classes}>
+                {this.renderExperience(index)}
+              </div>
+              {this.renderLines(index)}
             </div>
           </div>
           <div />

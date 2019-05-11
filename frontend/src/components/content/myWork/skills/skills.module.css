@@ -8,10 +8,12 @@
 .cardContainer {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 0.5vh;
-  cursor: pointer;
+  /* cursor: pointer; */
   overflow: hidden;
-  height: 23vh;
+  height: calc(15vh + 55px);
   width: 100%;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .cardColor {
@@ -27,16 +29,16 @@
 .cardContent {
   background-color: white;
   border-radius: 0 0 0.5vh 0.5vh;
-  height: 23vh;
+  height: calc(15vh + 55px);
   transition: all 0.3s ease-in;
 }
 
 /* .cardContent:hover {
-  transform: translate(0, -13vh);
-} */
+    transform: translate(0, -13vh);
+  } */
 
 .moved {
-  transform: translate(0, -14.5vh);
+  transform: translate(0, -14.25vh);
   border-radius: 0.5vh;
 }
 
@@ -53,7 +55,7 @@
 }
 
 .fridayText {
-  color: rgb(0, 114, 242);
+  border-color: rgb(0, 114, 242);
 }
 
 .peach {
@@ -65,7 +67,7 @@
 }
 
 .peachText {
-  color: rgb(255, 145, 125);
+  border-color: rgb(255, 145, 125);
 }
 
 .violet {
@@ -77,7 +79,7 @@
 }
 
 .violetText {
-  color: rgb(96, 100, 238);
+  border-color: rgb(96, 100, 238);
 }
 
 .forest {
@@ -89,7 +91,7 @@
 }
 
 .forestText {
-  color: rgb(51, 119, 108);
+  border-color: rgb(51, 119, 108);
 }
 
 .bloo {
@@ -101,7 +103,7 @@
 }
 
 .blooText {
-  color: rgba(47, 181, 227, 1);
+  border-color: rgba(47, 181, 227, 1);
 }
 
 .sundown {
@@ -113,7 +115,7 @@
 }
 
 .sundownText {
-  color: rgba(251, 128, 128, 1);
+  border-color: rgba(251, 128, 128, 1);
 }
 
 .ocean {
@@ -125,7 +127,7 @@
 }
 
 .oceanText {
-  color: rgb(37, 52, 101);
+  border-color: rgb(37, 52, 101);
 }
 
 .animation {
@@ -138,7 +140,7 @@
 }
 
 .animationText {
-  color: rgba(240, 70, 119, 1);
+  border-color: rgba(240, 70, 119, 1);
 }
 
 .reddy {
@@ -146,7 +148,7 @@
 }
 
 .reddyText {
-  color: #d64c7f;
+  border-color: #d64c7f;
 }
 
 .candy {
@@ -159,7 +161,7 @@
 }
 
 .candyText {
-  color: rgba(252, 36, 135, 1);
+  border-color: rgba(252, 36, 135, 1);
 }
 
 .mochi {
@@ -172,7 +174,7 @@
 }
 
 .mochiText {
-  color: rgb(103, 199, 169);
+  border-color: rgb(103, 199, 169);
 }
 
 .evergarden {
@@ -184,29 +186,20 @@
 }
 
 .evergardenText {
-  background-color: rgba(24, 40, 115, 1);
+  border-color: rgba(24, 40, 115, 1);
 }
 
 .classes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-row-gap: 0.75vh;
-  margin-top: 0.5vh;
+  grid-column-gap: 0.5vw;
+  margin-top: 0.25vh;
+  overflow-x: scroll;
+  width: 10vw;
 }
 
-.class {
-  border-radius: 0.5vh;
-  background-color: rgb(56, 179, 255);
-  color: white;
-  height: 4vh;
-  width: 4vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 13px;
-  /* background-color: green;
-  color: white; */
-  /* font-weight: bold; */
+.classes::-webkit-scrollbar {
+  display: none;
 }
 
 .fluency {
@@ -224,6 +217,7 @@
   display: flex;
   align-items: center;
   color: #393c45;
+  cursor: pointer;
   font-size: 20px;
 }
 
@@ -231,11 +225,69 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 8vh;
+  height: 55px;
   padding: 1vh 1vw;
 }
 
+.class {
+  grid-row: 1;
+  border-radius: 0.5vh;
+  border-width: 2px;
+  border-style: solid;
+  /* background-color: #38b3ff; */
+  color: #393c45;
+  height: 4vh;
+  width: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  /* text-shadow: 1px 1px rgba(0, 0, 0, 0.8); */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
+}
+
 .cardBody {
-  color: black;
-  padding: 0 1vw;
+  color: #393c45;
+  padding: 0 1vw 1vh;
+  height: calc(14.25vh + 0.5vh);
+  display: flex;
+  flex-direction: column;
+}
+
+.shiftBody {
+  margin-top: -0.5vh;
+}
+
+.expandedHeader {
+  /* padding-bottom: 0; */
+}
+
+.classHeader {
+  font-size: 14px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-top: 0.5vh;
+  /* text-transform: uppercase; */
+  /* font-weight: bold; */
+}
+
+.bodyText {
+  font-size: 12px;
+  line-height: 3vh;
+}
+
+.lines {
+  flex-grow: 1;
+  margin-top: 0.75vh;
+  color: #393c45;
+  display: flex;
+  text-decoration: underline;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 0.5vh;
+  border-style: solid;
+  border-width: 2px;
+  /* text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
 }
