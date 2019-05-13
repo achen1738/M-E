@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/frontend/static/css/main.490d6cb3.chunk.css",
-    "main.js": "/frontend/static/js/main.ce773881.chunk.js",
-    "main.js.map": "/frontend/static/js/main.ce773881.chunk.js.map",
-    "runtime~main.js": "/frontend/static/js/runtime~main.f332d61a.js",
-    "runtime~main.js.map": "/frontend/static/js/runtime~main.f332d61a.js.map",
-    "static/js/2.66d632cd.chunk.js": "/frontend/static/js/2.66d632cd.chunk.js",
-    "static/js/2.66d632cd.chunk.js.map": "/frontend/static/js/2.66d632cd.chunk.js.map",
-    "index.html": "/frontend/index.html",
-    "precache-manifest.bc2cdf9edd4b5a1d9fd0f0d68f2f2fa5.js": "/frontend/precache-manifest.bc2cdf9edd4b5a1d9fd0f0d68f2f2fa5.js",
-    "service-worker.js": "/frontend/service-worker.js",
-    "static/css/main.490d6cb3.chunk.css.map": "/frontend/static/css/main.490d6cb3.chunk.css.map",
-    "static/media/ArthurChenResume.pdf": "/frontend/static/media/ArthurChenResume.c2c15dd7.pdf",
-    "static/media/cells.jpg": "/frontend/static/media/cells.20259bce.jpg",
-    "static/media/go.jpg": "/frontend/static/media/go.ff3ea3c5.jpg",
-    "static/media/newLane2.gif": "/frontend/static/media/newLane2.713dcab7.gif",
-    "static/media/sem.jpg": "/frontend/static/media/sem.c5f187db.jpg"
+    "main.css": "/me/static/css/main.490d6cb3.chunk.css",
+    "main.js": "/me/static/js/main.1108a19b.chunk.js",
+    "main.js.map": "/me/static/js/main.1108a19b.chunk.js.map",
+    "runtime~main.js": "/me/static/js/runtime~main.7f73a39c.js",
+    "runtime~main.js.map": "/me/static/js/runtime~main.7f73a39c.js.map",
+    "static/js/2.66d632cd.chunk.js": "/me/static/js/2.66d632cd.chunk.js",
+    "static/js/2.66d632cd.chunk.js.map": "/me/static/js/2.66d632cd.chunk.js.map",
+    "index.html": "/me/index.html",
+    "precache-manifest.496621deca6f4568cb2136a6abbec8c5.js": "/me/precache-manifest.496621deca6f4568cb2136a6abbec8c5.js",
+    "service-worker.js": "/me/service-worker.js",
+    "static/css/main.490d6cb3.chunk.css.map": "/me/static/css/main.490d6cb3.chunk.css.map",
+    "static/media/ArthurChenResume.pdf": "/me/static/media/ArthurChenResume.c2c15dd7.pdf",
+    "static/media/cells.jpg": "/me/static/media/cells.20259bce.jpg",
+    "static/media/go.jpg": "/me/static/media/go.ff3ea3c5.jpg",
+    "static/media/newLane2.gif": "/me/static/media/newLane2.713dcab7.gif",
+    "static/media/sem.jpg": "/me/static/media/sem.c5f187db.jpg"
   }
 }
