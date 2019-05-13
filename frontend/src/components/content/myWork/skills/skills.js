@@ -6,7 +6,6 @@ import {
   FiChevronUp,
   FiChevronDown
 } from "react-icons/fi";
-import ReactTooltip from "react-tooltip";
 class Skills extends Component {
   state = {
     backgroundColors: [

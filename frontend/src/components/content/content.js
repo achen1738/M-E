@@ -3,7 +3,6 @@ import styles from "./content.module.css";
 import OuterCard from "./myWork/outerCard";
 import Research from "./myWork/research/research";
 import Lanes from "./myWork/lanes/lanes";
-import Meself from "./myWork/meself/meself";
 import Skills from "./myWork/skills/skills";
 import Work from "./myWork/work/work";
 
@@ -33,7 +32,7 @@ class Content extends Component {
 
         <OuterCard
           color={styles.black}
-          numWork={".03 - Independent and School Projects"}
+          numWork={".03 - Lanes.gg"}
           content={<Lanes />}
           description={
             "Data Analysis of Individual Matches for League of Legends."
