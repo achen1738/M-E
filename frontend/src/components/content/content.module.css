@@ -2,10 +2,17 @@
   position: static;
   overflow: visible;
   width: 60%;
-  max-width: 1200px;
   margin-left: 40%;
   float: none;
   clear: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .teal {

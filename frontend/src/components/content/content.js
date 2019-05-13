@@ -5,6 +5,7 @@ import Research from "./myWork/research/research";
 import Lanes from "./myWork/lanes/lanes";
 import Meself from "./myWork/meself/meself";
 import Skills from "./myWork/skills/skills";
+import Work from "./myWork/work/work";
 
 class Content extends Component {
   state = {};
@@ -20,6 +21,7 @@ class Content extends Component {
         <OuterCard
           color={styles.mediumBlue}
           numWork={".01 - Work Experience"}
+          content={<Work />}
           description={"Internships and Full-Time"}
         />
         <OuterCard
