@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "achen1738.github.io/static/css/main.490d6cb3.chunk.css",
-    "main.js": "achen1738.github.io/static/js/main.89e3c027.chunk.js",
-    "main.js.map": "achen1738.github.io/static/js/main.89e3c027.chunk.js.map",
-    "runtime~main.js": "achen1738.github.io/static/js/runtime~main.c346d629.js",
-    "runtime~main.js.map": "achen1738.github.io/static/js/runtime~main.c346d629.js.map",
-    "static/js/2.66d632cd.chunk.js": "achen1738.github.io/static/js/2.66d632cd.chunk.js",
-    "static/js/2.66d632cd.chunk.js.map": "achen1738.github.io/static/js/2.66d632cd.chunk.js.map",
-    "index.html": "achen1738.github.io/index.html",
-    "precache-manifest.67ef689777ffdc4e816556dd93705859.js": "achen1738.github.io/precache-manifest.67ef689777ffdc4e816556dd93705859.js",
-    "service-worker.js": "achen1738.github.io/service-worker.js",
-    "static/css/main.490d6cb3.chunk.css.map": "achen1738.github.io/static/css/main.490d6cb3.chunk.css.map",
-    "static/media/ArthurChenResume.pdf": "achen1738.github.io/static/media/ArthurChenResume.c2c15dd7.pdf",
-    "static/media/cells.jpg": "achen1738.github.io/static/media/cells.20259bce.jpg",
-    "static/media/go.jpg": "achen1738.github.io/static/media/go.ff3ea3c5.jpg",
-    "static/media/newLane2.gif": "achen1738.github.io/static/media/newLane2.713dcab7.gif",
-    "static/media/sem.jpg": "achen1738.github.io/static/media/sem.c5f187db.jpg"
+    "main.css": "/frontend/static/css/main.490d6cb3.chunk.css",
+    "main.js": "/frontend/static/js/main.ce773881.chunk.js",
+    "main.js.map": "/frontend/static/js/main.ce773881.chunk.js.map",
+    "runtime~main.js": "/frontend/static/js/runtime~main.f332d61a.js",
+    "runtime~main.js.map": "/frontend/static/js/runtime~main.f332d61a.js.map",
+    "static/js/2.66d632cd.chunk.js": "/frontend/static/js/2.66d632cd.chunk.js",
+    "static/js/2.66d632cd.chunk.js.map": "/frontend/static/js/2.66d632cd.chunk.js.map",
+    "index.html": "/frontend/index.html",
+    "precache-manifest.bc2cdf9edd4b5a1d9fd0f0d68f2f2fa5.js": "/frontend/precache-manifest.bc2cdf9edd4b5a1d9fd0f0d68f2f2fa5.js",
+    "service-worker.js": "/frontend/service-worker.js",
+    "static/css/main.490d6cb3.chunk.css.map": "/frontend/static/css/main.490d6cb3.chunk.css.map",
+    "static/media/ArthurChenResume.pdf": "/frontend/static/media/ArthurChenResume.c2c15dd7.pdf",
+    "static/media/cells.jpg": "/frontend/static/media/cells.20259bce.jpg",
+    "static/media/go.jpg": "/frontend/static/media/go.ff3ea3c5.jpg",
+    "static/media/newLane2.gif": "/frontend/static/media/newLane2.713dcab7.gif",
+    "static/media/sem.jpg": "/frontend/static/media/sem.c5f187db.jpg"
   }
 }
