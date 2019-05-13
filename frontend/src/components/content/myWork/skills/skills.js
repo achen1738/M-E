@@ -327,17 +327,30 @@ class Skills extends Component {
                 this.state.colors[index]
               ].join(" ")}
             >
-              {this.state.content[index].down ? (
-                <FiChevronDown />
-              ) : (
-                <FiChevronUp />
-              )}
+              {this.renderArrows(index)}
             </div>
           </div>
           <div />
         </div>
       );
     });
+  };
+
+  isScrollable = index => {
+    var content = this.state.content[index];
+    const classLen = content.classes.ids.length;
+    const projectLen = content.projects.ids.length;
+    return classLen && projectLen;
+  };
+
+  renderArrows = index => {
+    if (this.isScrollable(index)) {
+      return this.state.content[index].down ? (
+        <FiChevronDown />
+      ) : (
+        <FiChevronUp />
+      );
+    }
   };
 
   render() {
