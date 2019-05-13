@@ -5,6 +5,10 @@
   grid-row-gap: 3vh;
 }
 
+.whiteText {
+  color: white;
+}
+
 .cardContainer {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 0.5vh;
@@ -56,6 +60,11 @@
 
 .fridayText {
   border-color: rgb(0, 114, 242);
+  color: rgb(0, 114, 242);
+}
+
+.fridayBackground {
+  background-color: rgb(0, 114, 242, 0.75);
 }
 
 .peach {
@@ -68,6 +77,11 @@
 
 .peachText {
   border-color: rgb(255, 145, 125);
+  color: rgb(255, 145, 125);
+}
+
+.peachBackground {
+  background-color: rgb(255, 145, 125, 0.75);
 }
 
 .violet {
@@ -80,6 +94,11 @@
 
 .violetText {
   border-color: rgb(96, 100, 238);
+  color: rgb(96, 100, 238);
+}
+
+.violetBackground {
+  background-color: rgb(96, 100, 238, 0.5);
 }
 
 .forest {
@@ -92,6 +111,11 @@
 
 .forestText {
   border-color: rgb(51, 119, 108);
+  color: rgb(51, 119, 108);
+}
+
+.forestBackground {
+  background-color: rgb(51, 119, 108, 0.75);
 }
 
 .bloo {
@@ -104,6 +128,11 @@
 
 .blooText {
   border-color: rgba(47, 181, 227, 1);
+  color: rgba(47, 181, 227, 1);
+}
+
+.blooBackground {
+  background-color: rgba(47, 181, 227, 0.75);
 }
 
 .sundown {
@@ -116,6 +145,11 @@
 
 .sundownText {
   border-color: rgba(251, 128, 128, 1);
+  color: rgba(251, 128, 128, 1);
+}
+
+.sundownBackground {
+  background-color: rgba(251, 128, 128, 0.75);
 }
 
 .ocean {
@@ -128,6 +162,11 @@
 
 .oceanText {
   border-color: rgb(37, 52, 101);
+  color: rgb(37, 52, 101);
+}
+
+.oceanBackground {
+  background-color: rgb(37, 52, 101, 0.75);
 }
 
 .animation {
@@ -141,6 +180,11 @@
 
 .animationText {
   border-color: rgba(240, 70, 119, 1);
+  color: rgba(240, 70, 119, 1);
+}
+
+.animationBackground {
+  background-color: rgba(240, 70, 119, 0.75);
 }
 
 .reddy {
@@ -149,6 +193,11 @@
 
 .reddyText {
   border-color: #d64c7f;
+  color: #d64c7f;
+}
+
+.reddyBackground {
+  background-color: rgba(214, 76, 127, 0.75);
 }
 
 .candy {
@@ -162,6 +211,11 @@
 
 .candyText {
   border-color: rgba(252, 36, 135, 1);
+  color: rgba(252, 36, 135, 1);
+}
+
+.candyBackground {
+  background-color: rgba(252, 36, 135, 0.75);
 }
 
 .mochi {
@@ -175,6 +229,11 @@
 
 .mochiText {
   border-color: rgb(103, 199, 169);
+  color: rgb(103, 199, 169);
+}
+
+.mochiBackground {
+  background-color: rgb(103, 199, 169, 0.75);
 }
 
 .evergarden {
@@ -187,13 +246,15 @@
 
 .evergardenText {
   border-color: rgba(24, 40, 115, 1);
+  color: rgba(24, 40, 115, 1);
+}
+
+.evergardenBackground {
+  background-color: rgba(24, 40, 115, 0.75);
 }
 
 .classes {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 0.5vw;
-  margin-top: 0.25vh;
+  display: flex;
   overflow-x: scroll;
   width: 10vw;
 }
@@ -231,27 +292,32 @@
 
 .class {
   grid-row: 1;
-  border-radius: 0.5vh;
-  border-width: 2px;
+  border-radius: 0.3vh;
+  border-width: 1px;
   border-style: solid;
-  /* background-color: #38b3ff; */
-  color: #393c45;
   height: 4vh;
   width: 4vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 13px;
-  /* text-shadow: 1px 1px rgba(0, 0, 0, 0.8); */
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
+  margin-right: 0.25vw;
+  cursor: pointer;
+}
+
+.whiteText > span {
+  color: white;
 }
 
 .cardBody {
   color: #393c45;
-  padding: 0 1vw 1vh;
-  height: calc(14.25vh + 0.5vh);
-  display: flex;
-  flex-direction: column;
+  padding: 0 1vw;
+  height: calc(12.25vh + 0.5vh);
+  overflow-y: auto;
+}
+
+.cardBody::-webkit-scrollbar {
+  display: none;
 }
 
 .shiftBody {
@@ -290,4 +356,43 @@
   border-width: 2px;
   /* text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
+}
+
+.experienceText {
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 0.25vh 0;
+  color: #393c45;
+  width: 10vw;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.experienceText::after {
+  content: attr(data-info);
+  color: #b1b1b3;
+  font-size: 12px;
+}
+
+.experienceText:first-child {
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.experienceText:hover {
+  overflow: visible;
+  white-space: normal;
+  text-overflow: unset;
+}
+
+.experienceArrowContainer {
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experienceArrow {
+  width: 3vw;
 }

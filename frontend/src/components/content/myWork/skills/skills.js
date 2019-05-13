@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import styles from "./skills.module.css";
-import { FiMaximize2, FiMinimize2 } from "react-icons/fi";
-
+import {
+  FiMaximize2,
+  FiMinimize2,
+  FiChevronUp,
+  FiChevronDown
+} from "react-icons/fi";
+import ReactTooltip from "react-tooltip";
 class Skills extends Component {
   state = {
     backgroundColors: [
@@ -18,6 +23,20 @@ class Skills extends Component {
       styles.reddy,
       styles.mochi
     ],
+    solidBackground: [
+      styles.forestBackground,
+      styles.violetBackground,
+      styles.peachBackground,
+      styles.fridayBackground,
+      styles.blooBackground,
+      styles.sundownBackground,
+      styles.oceanBackground,
+      styles.animationBackground,
+      styles.candyBackground,
+      styles.evergardenBackground,
+      styles.reddyBackground,
+      styles.mochiBackground
+    ],
     colors: [
       styles.forestText,
       styles.violetText,
@@ -31,34 +50,6 @@ class Skills extends Component {
       styles.evergardenText,
       styles.reddyText,
       styles.mochiText
-    ],
-    text: [
-      "Java",
-      "C",
-      "ReactJS",
-      "T-SQL",
-      "Javascript",
-      "HTML5",
-      "CSS3",
-      "PostgreSQL",
-      "Typescript",
-      "NoSQL",
-      "Python",
-      "NodeJS"
-    ],
-    fluency: [
-      "(Fluent)",
-      "(Fluent)",
-      "(Fluent)",
-      "(Fluent)",
-      "(Fluent)",
-      "(Fluent)",
-      "(Fluent)",
-      "(Fluent)",
-      "(Functional)",
-      "(Functional)",
-      "(Functional)",
-      "(Functional)"
     ],
     opened: [
       false,
@@ -74,82 +65,199 @@ class Skills extends Component {
       false,
       false
     ],
+    info: {
+      430: "Intro to Database Systems",
+      427: "Introduction to Computer Security",
+      425: "Computer Systems Architecture",
+      421: "Operating Systems / Concurrent Programming",
+      412: "Compiler Construction - UG COMP",
+      410: "Software Engineering Methodology",
+      382: "Reasoning about Algorithms",
+      330: "Tools and Models - Data Science",
+      322: "Fundamentals of Parallel Programming",
+      321: "Introduction to Computer Systems",
+      310: "Advanced Object Oriented Programming",
+      215: "Introduction to Program Design",
+      182: "Discrete Math and Algorithmic Thinking",
+      140: "Introduction to Python",
+      L: "League of Legends Website",
+      SW: "School Sustainability Website",
+      AC: "This website"
+    },
     content: [
       {
-        experience: [215, 310, 412],
+        down: true,
+        text: "Java",
+        fluency: "(Fluent)",
+        classes: { ids: [215, 310, 412], opened: [true, false, false] },
+        projects: { ids: [], opened: [] },
         lines: "5,000+"
       },
       {
-        experience: [321, 421],
+        down: true,
+        text: "C",
+        fluency: "(Fluent)",
+        classes: { ids: [321, 421], opened: [true, false] },
+        projects: { ids: [], opened: [] },
         lines: "10,000+"
       },
       {
-        experience: [410, "l.gg"],
+        down: true,
+        text: "ReactJS",
+        fluency: "(Fluent)",
+        classes: { ids: [410], opened: [true] },
+        projects: { ids: ["L", "SW", "AC"], opened: [true, false, false] },
         lines: "10,000+"
       },
       {
-        experience: [330, 430, "l.gg"],
+        down: true,
+        text: "T-SQL",
+        fluency: "(Fluent)",
+        classes: { ids: [330, 430], opened: [true, false] },
+        projects: { ids: ["L"], opened: [true] },
         lines: "~1,000"
       },
       {
-        experience: ["l.gg"],
+        down: true,
+        text: "Javascript",
+        fluency: "(Fluent)",
+        classes: { ids: [410], opened: [true] },
+        projects: { ids: ["L", "SW", "AC"], opened: [true, false, false] },
         lines: "~5,000"
       },
       {
-        experience: [410, "l.gg"],
+        down: true,
+        text: "HTML5",
+        fluency: "(Fluent)",
+        classes: { ids: [410], opened: [true] },
+        projects: { ids: ["L", "SW", "AC"], opened: [true, false, false] },
         lines: "10,000+"
       },
       {
-        experience: [410, "l.gg"],
+        down: true,
+        text: "CSS3",
+        fluency: "(Fluent)",
+        classes: { ids: [410], opened: [true] },
+        projects: { ids: ["L", "SW", "AC"], opened: [true, false, false] },
         lines: "10,000+"
       },
       {
-        experience: [430, "l.gg"],
+        down: true,
+        text: "PostgreSQL",
+        fluency: "(Fluent)",
+        classes: { ids: [430], opened: [true] },
+        projects: { ids: [], opened: [] },
         lines: "~1,000"
       },
       {
-        experience: [410],
+        down: true,
+        text: "Typescript",
+        fluency: "(Functional)",
+        classes: { ids: [410], opened: [true] },
+        projects: { ids: [], opened: [] },
         lines: "~2,000"
       },
       {
-        experience: [430, "l.gg"],
+        down: true,
+        text: "NoSQL",
+        fluency: "(Functional)",
+        classes: { ids: [430], opened: [true] },
+        projects: { ids: ["L", "SW"], opened: [true, false] },
         lines: "~500"
       },
       {
-        experience: [140, 182],
+        down: true,
+        text: "Python",
+        fluency: "(Functional)",
+        classes: { ids: [140, 182], opened: [true, false] },
+        projects: { ids: [], opened: [] },
         lines: "~1000"
       },
       {
-        experience: ["l.gg"],
+        down: true,
+        text: "NodeJS",
+        fluency: "(Functional)",
+        classes: { ids: [], opened: [] },
+        projects: { ids: ["L", "SW"], opened: [true, false] },
         lines: "~500"
       }
     ]
-    // "Java",
-    // "C",
-    // "ReactJS",
-    // "T-SQL",
-    // "Javascript",
-    // "HTML5",
-    // "CSS3",
-    // "PostgreSQL",
-    // "Typescript",
-    // "NoSQL",
-    // "Python",
-    // "NodeJS"
   };
 
-  setOpened = e => {
+  handleScroll = (e, index) => {
+    const bottom =
+      e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
+    if (e.target.scrollHeight - e.target.clientHeight !== 0) {
+      var content = this.state.content;
+      if (bottom) {
+        content[index].down = false;
+      } else if (e.target.scrollTop === 0) {
+        content[index].down = true;
+      }
+      this.setState({ content: content });
+    }
+  };
+
+  setCardOpened = e => {
     const index = parseInt(e.currentTarget.getAttribute("data-index"));
     var opened = this.state.opened;
     opened[index] = !opened[index];
     this.setState({ opened: opened });
   };
 
-  renderExperience = index => {
-    return this.state.content[index].experience.map(exp => {
+  setExperienceOpened = (e, groupString) => {
+    const contentIndex = parseInt(
+      e.currentTarget.getAttribute("data-content-index")
+    );
+    const openedIndex = parseInt(
+      e.currentTarget.getAttribute("data-opened-index")
+    );
+    var content = this.state.content;
+    var newOpened = content[contentIndex][groupString].opened.map(
+      (bool, index) => {
+        return index === openedIndex;
+      }
+    );
+    content[contentIndex][groupString].opened = newOpened;
+    this.setState({ content: content });
+  };
+
+  renderExperience = (index, groupString) => {
+    const group = this.state.content[index][groupString];
+    const openedIndex = group.opened.findIndex(bool => bool);
+    const openedID = group.ids[openedIndex];
+    const info = " - " + this.state.info[openedID];
+    const textStyle = [styles.experienceText, this.state.colors[index]];
+    if (group.ids.length > 0) {
       return (
-        <div className={[styles.class, this.state.colors[index]].join(" ")}>
-          {exp}
+        <>
+          <div data-info={info} className={textStyle.join(" ")}>
+            {groupString}
+          </div>
+          <div className={styles.classes}>
+            {this.renderGroup(group, index, groupString)}
+          </div>
+        </>
+      );
+    }
+  };
+
+  renderGroup = (group, index, groupString) => {
+    const openedGroup = group.opened;
+    return group.ids.map((id, idx) => {
+      let expStyle = [styles.class, this.state.colors[index]];
+      if (openedGroup[idx])
+        expStyle.push(this.state.solidBackground[index], styles.whiteText);
+      //   else expStyle.push(this.state.colors[index]);
+      return (
+        <div
+          data-content-index={index}
+          data-opened-index={idx}
+          onClick={e => this.setExperienceOpened(e, groupString)}
+          key={idx}
+          className={expStyle.join(" ")}
+        >
+          <span className={[this.state.colors[index]]}>{id}</span>
         </div>
       );
     });
@@ -164,7 +272,7 @@ class Skills extends Component {
   };
 
   renderCards = () => {
-    return this.state.text.map((text, index) => {
+    return this.state.content.map((exp, index) => {
       let contentStyle = [styles.cardContent];
       if (this.state.opened[index]) contentStyle.push(styles.moved);
 
@@ -189,37 +297,41 @@ class Skills extends Component {
           <div className={contentStyle.join(" ")}>
             <div className={headerStyle.join(" ")}>
               <div className={styles.cardInfo}>
-                <span className={[styles.cardText].join(" ")}>{text}</span>
-                <span className={styles.fluency}>
-                  {this.state.fluency[index]}
-                </span>
+                <span className={[styles.cardText].join(" ")}>{exp.text}</span>
+                <span className={styles.fluency}>{exp.fluency}</span>
               </div>
               <div className={styles.arrowContainer}>
                 {this.state.opened[index] ? (
                   <FiMinimize2
                     data-index={index}
-                    onClick={e => this.setOpened(e)}
+                    onClick={e => this.setCardOpened(e)}
                   />
                 ) : (
                   <FiMaximize2
                     data-index={index}
-                    onClick={e => this.setOpened(e)}
+                    onClick={e => this.setCardOpened(e)}
                   />
                 )}
               </div>
             </div>
-            <div className={bodyStyle.join(" ")}>
-              <div
-                className={[styles.classHeader, this.state.colors[index]].join(
-                  " "
-                )}
-              >
-                Experience
-              </div>
-              <div className={styles.classes}>
-                {this.renderExperience(index)}
-              </div>
-              {this.renderLines(index)}
+            <div
+              className={bodyStyle.join(" ")}
+              onScroll={e => this.handleScroll(e, index)}
+            >
+              {this.renderExperience(index, "classes")}
+              {this.renderExperience(index, "projects")}
+            </div>
+            <div
+              className={[
+                styles.experienceArrowContainer,
+                this.state.colors[index]
+              ].join(" ")}
+            >
+              {this.state.content[index].down ? (
+                <FiChevronDown />
+              ) : (
+                <FiChevronUp />
+              )}
             </div>
           </div>
           <div />

@@ -19,29 +19,28 @@ class Content extends Component {
         />
         <OuterCard
           color={styles.mediumBlue}
-          numWork={".02 - Work Experience"}
+          numWork={".01 - Work Experience"}
           description={"Internships and Full-Time"}
         />
         <OuterCard
           color={styles.mediumPurple}
-          numWork={".03 - Research and Publications"}
+          numWork={".02 - Research and Publications"}
           content={<Research />}
           description={"Materials Science Research at Stony Brook University"}
         />
 
         <OuterCard
           color={styles.black}
-          numWork={".04 - Independent and School Projects"}
+          numWork={".03 - Independent and School Projects"}
           content={<Lanes />}
           description={
             "Data Analysis of Individual Matches for League of Legends."
           }
         />
-        <OuterCard
+        {/* <OuterCard
           color={styles.brightRed}
-          //   numWork={".05"}
           description={"Kernel"}
-        />
+        /> */}
       </div>
     );
   }
