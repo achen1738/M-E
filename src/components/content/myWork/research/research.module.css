@@ -168,3 +168,44 @@
 .arrowIcon {
   padding-left: 0.25vw;
 }
+
+@media only screen and (max-width: 1050px) {
+  .researchImage > img {
+    width: 38vw;
+  }
+
+  .middleImage {
+    width: 38vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .imageContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .researchImage > img {
+    width: 35vw;
+  }
+
+  .center {
+    left: 45%;
+    top: 9%;
+  }
+
+  .middleImage {
+    height: 100%;
+    width: 38vw;
+  }
+
+  .topLeft {
+    top: 9%;
+    left: 7%;
+  }
+
+  .bottomRight {
+    top: 9%;
+    right: 7%;
+  }
+}

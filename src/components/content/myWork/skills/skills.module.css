@@ -5,6 +5,15 @@
   grid-row-gap: 3vh;
 }
 
+@media only screen and (max-width: 450px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 3vh;
+  }
+}
+
 .whiteText {
   color: white;
 }
@@ -15,7 +24,7 @@
   /* cursor: pointer; */
   overflow: hidden;
   height: calc(15vh + 55px);
-  width: 100%;
+  width: inherit;
   /* display: flex;
   flex-direction: column; */
 }
@@ -35,6 +44,7 @@
   border-radius: 0 0 0.5vh 0.5vh;
   height: calc(15vh + 55px);
   transition: all 0.3s ease-in;
+  width: inherit;
 }
 
 /* .cardContent:hover {
@@ -50,213 +60,10 @@
   box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.3);
 }
 
-.friday {
-  background-image: radial-gradient(
-    circle farthest-corner at 3% 7.4%,
-    rgba(0, 144, 243, 1) 0%,
-    rgba(0, 86, 240, 1) 90%
-  );
-}
-
-.fridayText {
-  border-color: rgb(0, 114, 242);
-  color: rgb(0, 114, 242);
-}
-
-.fridayBackground {
-  background-color: rgb(0, 114, 242, 0.75);
-}
-
-.peach {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(255, 221, 51, 1) 100.2%,
-    rgba(187, 187, 187, 1) 100.2%
-  );
-}
-
-.peachText {
-  border-color: rgb(255, 145, 125);
-  color: rgb(255, 145, 125);
-}
-
-.peachBackground {
-  background-color: rgb(255, 145, 125, 0.75);
-}
-
-.violet {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(126, 155, 212, 1) 0%,
-    rgba(87, 83, 247, 1) 90%
-  );
-}
-
-.violetText {
-  border-color: rgb(96, 100, 238);
-  color: rgb(96, 100, 238);
-}
-
-.violetBackground {
-  background-color: rgb(96, 100, 238, 0.5);
-}
-
-.forest {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(30, 180, 165, 1) 0%,
-    rgba(60, 94, 85, 1) 90.1%
-  );
-}
-
-.forestText {
-  border-color: rgb(51, 119, 108);
-  color: rgb(51, 119, 108);
-}
-
-.forestBackground {
-  background-color: rgb(51, 119, 108, 0.75);
-}
-
-.bloo {
-  background-image: radial-gradient(
-    circle farthest-corner at 21.3% 26.5%,
-    rgba(47, 181, 227, 1) 0%,
-    rgba(155, 208, 237, 1) 61.4%
-  );
-}
-
-.blooText {
-  border-color: rgba(47, 181, 227, 1);
-  color: rgba(47, 181, 227, 1);
-}
-
-.blooBackground {
-  background-color: rgba(47, 181, 227, 0.75);
-}
-
-.sundown {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(253, 193, 104, 1) 0%,
-    rgba(251, 128, 128, 1) 90%
-  );
-}
-
-.sundownText {
-  border-color: rgba(251, 128, 128, 1);
-  color: rgba(251, 128, 128, 1);
-}
-
-.sundownBackground {
-  background-color: rgba(251, 128, 128, 0.75);
-}
-
-.ocean {
-  background-image: radial-gradient(
-    circle farthest-corner at 1.8% 4.8%,
-    rgba(17, 23, 58, 1) 0%,
-    rgba(58, 85, 148, 1) 90%
-  );
-}
-
-.oceanText {
-  border-color: rgb(37, 52, 101);
-  color: rgb(37, 52, 101);
-}
-
-.oceanBackground {
-  background-color: rgb(37, 52, 101, 0.75);
-}
-
-.animation {
-  background-image: radial-gradient(
-    circle 728px at 100.3% 119%,
-    rgba(240, 70, 119, 1) 5.3%,
-    rgba(255, 162, 128, 1) 38.8%,
-    rgba(255, 255, 255, 1) 100.2%
-  );
-}
-
-.animationText {
-  border-color: rgba(240, 70, 119, 1);
-  color: rgba(240, 70, 119, 1);
-}
-
-.animationBackground {
-  background-color: rgba(240, 70, 119, 0.75);
-}
-
-.reddy {
-  background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
-}
-
-.reddyText {
-  border-color: #d64c7f;
-  color: #d64c7f;
-}
-
-.reddyBackground {
-  background-color: rgba(214, 76, 127, 0.75);
-}
-
-.candy {
-  background-image: radial-gradient(
-    circle 760px at 13% 16.8%,
-    rgba(255, 214, 223, 1) 0%,
-    rgba(248, 131, 174, 1) 50.6%,
-    rgba(252, 36, 135, 1) 93.4%
-  );
-}
-
-.candyText {
-  border-color: rgba(252, 36, 135, 1);
-  color: rgba(252, 36, 135, 1);
-}
-
-.candyBackground {
-  background-color: rgba(252, 36, 135, 0.75);
-}
-
-.mochi {
-  background-image: radial-gradient(
-    circle 953px at 1.4% 4%,
-    rgba(160, 236, 191, 1) 0%,
-    rgba(11, 138, 133, 1) 45.3%,
-    rgba(9, 68, 103, 1) 100.2%
-  );
-}
-
-.mochiText {
-  border-color: rgb(103, 199, 169);
-  color: rgb(103, 199, 169);
-}
-
-.mochiBackground {
-  background-color: rgb(103, 199, 169, 0.75);
-}
-
-.evergarden {
-  background-image: radial-gradient(
-    circle farthest-corner at 2.7% 6.3%,
-    rgba(138, 235, 185, 1) 0%,
-    rgba(24, 40, 115, 1) 90%
-  );
-}
-
-.evergardenText {
-  border-color: rgba(24, 40, 115, 1);
-  color: rgba(24, 40, 115, 1);
-}
-
-.evergardenBackground {
-  background-color: rgba(24, 40, 115, 0.75);
-}
-
 .classes {
   display: flex;
   overflow-x: scroll;
-  width: 10vw;
+  width: inherit;
 }
 
 .classes::-webkit-scrollbar {
@@ -285,7 +92,7 @@
 .cardHeader {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: inherit;
   height: 55px;
   padding: 1vh 1vw;
 }
@@ -314,6 +121,7 @@
   padding: 0 1vw;
   height: calc(12.25vh + 0.5vh);
   overflow-y: auto;
+  width: inherit;
 }
 
 .cardBody::-webkit-scrollbar {
@@ -359,7 +167,7 @@
   font-size: 14px;
   padding: 0.25vh 0;
   color: #393c45;
-  width: 10vw;
+  width: inherit;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./skills.module.css";
+import colors from "../colors.module.css";
 import {
   FiMaximize2,
   FiMinimize2,
@@ -9,46 +10,46 @@ import {
 class Skills extends Component {
   state = {
     backgroundColors: [
-      styles.forest,
-      styles.violet,
-      styles.peach,
-      styles.friday,
-      styles.bloo,
-      styles.sundown,
-      styles.ocean,
-      styles.animation,
-      styles.candy,
-      styles.evergarden,
-      styles.reddy,
-      styles.mochi
+      colors.forest,
+      colors.violet,
+      colors.peach,
+      colors.friday,
+      colors.bloo,
+      colors.sundown,
+      colors.ocean,
+      colors.animation,
+      colors.candy,
+      colors.evergarden,
+      colors.reddy,
+      colors.mochi
     ],
     solidBackground: [
-      styles.forestBackground,
-      styles.violetBackground,
-      styles.peachBackground,
-      styles.fridayBackground,
-      styles.blooBackground,
-      styles.sundownBackground,
-      styles.oceanBackground,
-      styles.animationBackground,
-      styles.candyBackground,
-      styles.evergardenBackground,
-      styles.reddyBackground,
-      styles.mochiBackground
+      colors.forestBackground,
+      colors.violetBackground,
+      colors.peachBackground,
+      colors.fridayBackground,
+      colors.blooBackground,
+      colors.sundownBackground,
+      colors.oceanBackground,
+      colors.animationBackground,
+      colors.candyBackground,
+      colors.evergardenBackground,
+      colors.reddyBackground,
+      colors.mochiBackground
     ],
     colors: [
-      styles.forestText,
-      styles.violetText,
-      styles.peachText,
-      styles.fridayText,
-      styles.blooText,
-      styles.sundownText,
-      styles.oceanText,
-      styles.animationText,
-      styles.candyText,
-      styles.evergardenText,
-      styles.reddyText,
-      styles.mochiText
+      colors.forestText,
+      colors.violetText,
+      colors.peachText,
+      colors.fridayText,
+      colors.blooText,
+      colors.sundownText,
+      colors.oceanText,
+      colors.animationText,
+      colors.candyText,
+      colors.evergardenText,
+      colors.reddyText,
+      colors.mochiText
     ],
     opened: [
       false,

@@ -9,6 +9,12 @@
   position: relative;
 }
 
+@media only screen and (max-width: 450px) {
+  .timelineContainer {
+    width: 50vw;
+  }
+}
+
 .timelineContainer::before {
   content: "";
   display: block;

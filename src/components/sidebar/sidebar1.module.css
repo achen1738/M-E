@@ -24,7 +24,7 @@
   color: #333333;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1050px) {
   .container {
     /* height: 40vh; */
     position: static;
@@ -33,9 +33,9 @@
 
   .about {
     position: static;
+    width: 100%;
     padding: 6vh 6vw;
-    font-style: "Montserrat";
-    color: #333333;
+    /* bottom: auto; */
   }
 }
 
