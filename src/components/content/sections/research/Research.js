@@ -2,18 +2,17 @@ import React, { Component } from "react";
 import GO from "../../../../images/go.jpg";
 import SEM from "../../../../images/sem.jpg";
 import Cells from "../../../../images/cells.jpg";
-import styles from "./research.module.css";
+import styles from "./Research.module.css";
 import { FaInfoCircle } from "react-icons/fa";
 import ReactTooltip from "react-tooltip";
-import TopPublications from "./topPublications";
-import BottomPublications from "./bottomPublications";
-import HorizontalPublications from "./horizPublications";
+import TopPublications from "./TopPublications";
+import BottomPublications from "./BottomPublications";
+import HorizontalPublications from "./HorizPublications";
 
 class Research extends Component {
   state = {};
   render() {
     let width = window.innerWidth;
-    console.log(width);
     return (
       <>
         <div className={styles.imageContainer}>

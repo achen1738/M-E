@@ -5,6 +5,18 @@
   grid-row-gap: 3vh;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center > svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+
 @media only screen and (max-width: 450px) {
   .container {
     display: grid;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./work.module.css";
+import styles from "./Work.module.css";
 import { FiCircle } from "react-icons/fi";
 
 class Work extends Component {

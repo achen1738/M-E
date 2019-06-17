@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import styles from "./myWork.module.css";
-class InnerCard extends Component {
+import styles from "./Sections.module.css";
+class InnerSection extends Component {
   state = {};
   render() {
     return (
@@ -13,4 +13,4 @@ class InnerCard extends Component {
   }
 }
 
-export default InnerCard;
+export default InnerSection;

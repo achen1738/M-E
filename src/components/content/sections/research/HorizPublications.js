@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import styles from "./horizontalPublications.module.css";
-import { FaInfoCircle, FaArrowRight } from "react-icons/fa";
+import styles from "./HorizontalPublications.module.css";
+import { FaArrowRight } from "react-icons/fa";
 
 class HorizontalPublications extends Component {
   state = {};

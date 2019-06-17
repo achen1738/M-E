@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import styles from "./myWork.module.css";
-import InnerCard from "./innerCard";
-class OuterCard extends Component {
+import styles from "./Sections.module.css";
+import InnerSection from "./InnerSection";
+class OuterSection extends Component {
   state = {};
   render() {
     return (
       <div className={[styles.container, this.props.color].join(" ")}>
-        <InnerCard
+        <InnerSection
           numWork={this.props.numWork}
           content={this.props.content}
           description={this.props.description}
@@ -16,4 +16,4 @@ class OuterCard extends Component {
   }
 }
 
-export default OuterCard;
+export default OuterSection;

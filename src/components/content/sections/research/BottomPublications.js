@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./research.module.css";
+import styles from "./Research.module.css";
 import { FaArrowRight } from "react-icons/fa";
 
 class BottomPublications extends Component {

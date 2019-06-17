@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./sidebar.module.css";
+import styles from "./Sidebar.module.css";
 import { FaEnvelope, FaGithub, FaFileAlt, FaMobileAlt } from "react-icons/fa";
 import Resume from "../../files/ArthurChenResume.pdf";
 

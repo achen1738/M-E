@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./sidebar1.module.css";
+import styles from "./Sidebar1.module.css";
 import {
   FiClipboard,
   FiDownload,

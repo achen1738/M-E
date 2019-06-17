@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./meself.module.css";
+import styles from "./Meself.module.css";
 
 class Meself extends Component {
   state = {};
