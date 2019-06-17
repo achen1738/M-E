@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-
+import styles from "./Body.module.css";
 class Body extends Component {
   state = {};
   render() {
-    return <div />;
+    return <div className={styles.container} />;
   }
 }
 

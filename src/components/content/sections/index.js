@@ -1,8 +1,8 @@
-import { Lanes } from "./lanes";
-import { Meself } from "./meself";
-import { Research } from "./research";
-import { Skills } from "./skills";
-import { Work } from "./work";
+import { Lanes } from "./Lanes";
+import { Meself } from "./Meself";
+import { Research } from "./Research";
+import { Skills, Split } from "./Skills";
+import { Work } from "./Work";
 import OuterSection from "./OuterSection";
 
-export { Lanes, Meself, Research, Skills, Work, OuterSection };
+export { Lanes, Meself, Research, Skills, Work, OuterSection, Split };

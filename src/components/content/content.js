@@ -1,12 +1,7 @@
 import React, { Component } from "react";
 import styles from "./Content.module.css";
-
-import { OuterSection, Research, Lanes, Skills, Work } from "./sections";
-// import OuterSection from "./myWork/outerSection";
-// import Research from "./myWork/research/research";
-// import Lanes from "./myWork/lanes/lanes";
-// import Skills from "./myWork/skills/Cards/skills";
-// import Work from "./myWork/work/work";
+// eslint-disable-next-line
+import { OuterSection, Research, Lanes, Skills, Work, Split } from "./sections";
 
 class Content extends Component {
   state = {};
