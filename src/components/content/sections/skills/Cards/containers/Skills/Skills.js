@@ -1,12 +1,6 @@
 import React, { Component } from "react";
-import styles from "./Skills.module.css";
-import colors from "../../colors.module.css";
-import {
-  FiMaximize2,
-  FiMinimize2,
-  FiChevronUp,
-  FiChevronDown
-} from "react-icons/fi";
+import colors from "../../../../colors.module.css";
+import { SkillCard, styles } from "../../index";
 
 class Skills extends Component {
   state = {
@@ -205,22 +199,13 @@ class Skills extends Component {
     ]
   };
 
-  handleScroll = (e, index) => {
-    const bottom =
-      e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-    if (e.target.scrollHeight - e.target.clientHeight !== 0) {
-      var content = this.state.content;
-      if (bottom) {
-        content[index].down = false;
-      } else if (e.target.scrollTop === 0) {
-        content[index].down = true;
-      }
-      this.setState({ content: content });
-    }
+  setContent = (content, index) => {
+    let contentState = this.state.content;
+    contentState[index] = content;
+    this.setState({ content: contentState });
   };
 
-  setCardOpened = e => {
-    const index = parseInt(e.currentTarget.getAttribute("data-index"));
+  setCardOpened = index => {
     var opened = this.state.opened;
     opened[index] = !opened[index];
     this.setState({ opened: opened });
@@ -305,76 +290,32 @@ class Skills extends Component {
       let bodyStyle = [styles.cardBody];
       if (this.state.opened[index]) bodyStyle.push(styles.shiftBody);
 
+      const backgroundColor = this.state.backgroundColors[index];
+      const color = this.state.colors[index];
+      const content = this.state.content[index];
+      const opened = this.state.opened[index];
+      const solidBackground = this.state.solidBackground[index];
       return (
-        <div
+        <SkillCard
           key={index}
-          data-index={index}
-          className={[styles.cardContainer].join(" ")}
-        >
-          <div
-            className={[
-              styles.cardColor,
-              this.state.backgroundColors[index]
-            ].join(" ")}
-          />
-          <div className={contentStyle.join(" ")}>
-            <div className={headerStyle.join(" ")}>
-              <div className={styles.cardInfo}>
-                <span className={[styles.cardText].join(" ")}>{exp.text}</span>
-                <span className={styles.fluency}>{exp.fluency}</span>
-              </div>
-              <div className={styles.arrowContainer}>
-                {this.state.opened[index] ? (
-                  <FiMinimize2
-                    data-index={index}
-                    onClick={e => this.setCardOpened(e)}
-                  />
-                ) : (
-                  <FiMaximize2
-                    data-index={index}
-                    onClick={e => this.setCardOpened(e)}
-                  />
-                )}
-              </div>
-            </div>
-            <div
-              className={bodyStyle.join(" ")}
-              onScroll={e => this.handleScroll(e, index)}
-            >
-              {this.renderExperience(index, "work")}
-              {this.renderExperience(index, "classes")}
-              {this.renderExperience(index, "projects")}
-            </div>
-            <div
-              className={[
-                styles.experienceArrowContainer,
-                this.state.colors[index]
-              ].join(" ")}
-            >
-              {this.renderArrows(index)}
-            </div>
-          </div>
-          <div />
-        </div>
+          index={index}
+          backgroundColor={backgroundColor}
+          color={color}
+          content={content}
+          opened={opened}
+          setCardOpened={this.setCardOpened}
+          contentStyle={contentStyle}
+          headerStyle={headerStyle}
+          bodyStyle={bodyStyle}
+          exp={exp}
+          solidBackground={solidBackground}
+          info={this.state.info}
+          icons={this.state.icons}
+          setExperienceOpened={this.setExperienceOpened}
+          setContent={this.setContent}
+        />
       );
     });
-  };
-
-  isScrollable = index => {
-    var content = this.state.content[index];
-    const classLen = content.classes.ids.length;
-    const projectLen = content.projects.ids.length;
-    return classLen && projectLen;
-  };
-
-  renderArrows = index => {
-    if (this.isScrollable(index)) {
-      return this.state.content[index].down ? (
-        <FiChevronDown />
-      ) : (
-        <FiChevronUp />
-      );
-    }
   };
 
   render() {

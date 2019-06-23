@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import GO from "../../../../images/go.jpg";
-import SEM from "../../../../images/sem.jpg";
-import Cells from "../../../../images/cells.jpg";
+import { GO, SEM, Cells } from "../../../../../../images";
 import styles from "./Research.module.css";
 import { FaInfoCircle } from "react-icons/fa";
 import ReactTooltip from "react-tooltip";
-import TopPublications from "./TopPublications";
-import BottomPublications from "./BottomPublications";
-import HorizontalPublications from "./HorizPublications";
+import {
+  TopPublications,
+  BottomPublications,
+  HorizontalPublications
+} from "../../index";
 
 class Research extends Component {
   state = {};

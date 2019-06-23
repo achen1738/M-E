@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./Research.module.css";
+import styles from "../../containers/Research/Research.module.css";
 import { FaArrowRight } from "react-icons/fa";
 
 class TopPublications extends Component {
