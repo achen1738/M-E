@@ -1,3 +1,4 @@
+@import "../../../../scss/positions";
 .left {
   position: fixed;
   width: 40%;
@@ -23,28 +24,26 @@
     color: #333333;
 
     &-links {
-      display: flex;
-      align-items: center;
+      @extend %flex-middle;
       position: relative;
 
       &-container {
-        display: flex;
-        align-items: center;
+        @extend %flex-middle;
       }
     }
 
     &-link {
-      display: flex;
-      align-items: center;
+      @extend %flex-middle;
+
       transition: all 0.2s ease-in-out;
       color: #4a4a4a;
 
       &-text {
-        display: flex;
-        align-items: center;
+        @extend %flex-middle;
         font-size: 23px;
         margin-left: 0.25vw;
         border-bottom: 1px solid black;
+        transition: all 0.2s ease-in-out;
         cursor: pointer;
       }
     }
@@ -99,8 +98,12 @@
       color: rgb(29, 134, 255);
     }
 
-    &_teal {
+    &_orange {
       color: rgb(255, 166, 0);
+    }
+
+    &_purple {
+      color: rgb(108, 10, 182);
     }
   }
 
@@ -112,8 +115,12 @@
     color: rgb(29, 134, 255);
   }
 
-  &__teal:hover {
+  &__orange:hover {
     color: rgb(255, 166, 0);
+  }
+
+  &__purple:hover {
+    color: rgb(108, 10, 182);
   }
 
   &__linkable:hover {

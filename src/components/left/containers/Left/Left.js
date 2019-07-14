@@ -5,7 +5,8 @@ import {
   FiGithub,
   FiFile,
   FiMail,
-  FiLink
+  FiLink,
+  FiCodepen
 } from "react-icons/fi";
 import Resume from "../../../../files/ArthurChenResume.pdf";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -23,11 +24,11 @@ class SideBar1 extends Component {
     const resume = this.resume();
     const email = this.email();
     const github = this.github();
-
+    const code = this.code();
     this.state = {
       activeIndex: 0,
       copySuccess: "",
-      linkComponent: [resume, email, github],
+      linkComponent: [resume, email, github, code],
       copied: false
     };
   }
@@ -50,6 +51,8 @@ class SideBar1 extends Component {
         return this.email();
       case 2:
         return this.github();
+      case 3:
+        return this.code();
       default:
         return;
     }
@@ -66,7 +69,7 @@ class SideBar1 extends Component {
         className="left__about-link-text left__about-link left__red"
         download
       >
-        <span>RESUME</span>
+        <span>Resume</span>
         <FiDownload className="left__icon_text" />
       </a>
     );
@@ -94,21 +97,36 @@ class SideBar1 extends Component {
     return (
       <a
         href="https://www.github.com/achen1738"
-        className="left__about-link-text left__about-link left__teal"
+        className="left__about-link-text left__about-link left__orange"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <span>GITHUB</span>
+        <span>Github</span>
+        <FiLink className="left__icon_text" />
+      </a>
+    );
+  };
+
+  code = () => {
+    return (
+      <a
+        href="https://www.github.com/achen1738/me"
+        className="left__about-link-text left__about-link left__purple"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span>Source Code</span>
         <FiLink className="left__icon_text" />
       </a>
     );
   };
 
   render = () => {
-    const linkStyle = "left__about-link-text left__about-link";
+    const linkStyle = "left__about-link";
     let resumeStyles = linkStyle + " left__red";
     let emailStyles = linkStyle + " left__blue";
-    let githubStyles = linkStyle + " left__teal";
+    let githubStyles = linkStyle + " left__orange";
+    let codeStyles = linkStyle + " left__purple";
     switch (parseInt(this.state.activeIndex)) {
       case 0:
         resumeStyles += " left__active_red";
@@ -117,7 +135,10 @@ class SideBar1 extends Component {
         emailStyles += " left__active_blue";
         break;
       case 2:
-        githubStyles += " left__active_teal";
+        githubStyles += " left__active_orange";
+        break;
+      case 3:
+        codeStyles += " left__active_purple";
         break;
       default:
         break;
@@ -146,6 +167,13 @@ class SideBar1 extends Component {
               <div className={githubStyles}>
                 <FiGithub
                   data-index={2}
+                  onClick={e => this.setIndex(e)}
+                  className="left__icon left__icon_small"
+                />
+              </div>
+              <div className={codeStyles}>
+                <FiCodepen
+                  data-index={3}
                   onClick={e => this.setIndex(e)}
                   className="left__icon left__icon_small"
                 />
