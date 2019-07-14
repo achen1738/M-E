@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "../Sections.module.css";
 import InnerSection from "../InnerSection";
+import "./OuterSection.scss";
 class OuterSection extends Component {
   state = {};
   render() {

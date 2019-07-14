@@ -8,7 +8,7 @@ import {
   FiMaximize2,
   FiMinimize2
 } from "react-icons/fi";
-
+import "./Card.scss";
 class SkillCard extends Component {
   state = {};
 
@@ -47,9 +47,10 @@ class SkillCard extends Component {
   renderExperiences = () => {
     let { index, color, content, solidBackground, info, icons } = this.props;
 
-    return ["work", "classes", "projects"].map(groupString => {
+    return ["work", "classes", "projects"].map((groupString, idx) => {
       return (
         <Experience
+          key={idx}
           index={index}
           groupString={groupString}
           content={content}
@@ -76,19 +77,15 @@ class SkillCard extends Component {
       exp
     } = this.props;
     return (
-      <div
-        key={index}
-        data-index={index}
-        className={[styles.cardContainer].join(" ")}
-      >
+      <div key={index} data-index={index} className="skills__card">
         <div className={[styles.cardColor, backgroundColor].join(" ")} />
         <div className={contentStyle.join(" ")}>
           <div className={headerStyle.join(" ")}>
-            <div className={styles.cardInfo}>
-              <span className={[styles.cardText].join(" ")}>{exp.text}</span>
-              <span className={styles.fluency}>{exp.fluency}</span>
+            <div className="skills__card-info">
+              <span className="skills__card-text">{exp.text}</span>
+              <span className="skills__card-fluency">{exp.fluency}</span>
             </div>
-            <div className={styles.arrowContainer}>
+            <div className="skills__card-arrow">
               {opened ? (
                 <FiMinimize2
                   data-index={index}
@@ -104,9 +101,6 @@ class SkillCard extends Component {
             onScroll={e => this.handleScroll(e)}
           >
             {this.renderExperiences()}
-            {/* {this.renderExperience(index, "work")}
-        {this.renderExperience(index, "classes")}
-        {this.renderExperience(index, "projects")} */}
           </div>
           <div className={[styles.experienceArrowContainer, color].join(" ")}>
             {this.renderArrows()}

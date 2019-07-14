@@ -1,0 +1,43 @@
+.right {
+  position: static;
+  overflow: visible;
+  width: 60%;
+  margin-left: 40%;
+  float: none;
+  clear: none;
+  @media only screen and (max-width: 1050px) {
+    & {
+      height: auto;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__teal {
+    background-color: #6ac8b2;
+  }
+
+  &__purple {
+    background-color: rgb(84, 41, 148);
+  }
+
+  &__red {
+    background-color: #f9003c;
+  }
+
+  &__beige {
+    background-color: #f4b93d;
+  }
+
+  &__blue {
+    background-color: #005ba9;
+  }
+
+  &__ink {
+    background-color: #eabad8;
+  }
+
+  &__black {
+    background-color: rgb(56, 55, 55);
+  }
+}

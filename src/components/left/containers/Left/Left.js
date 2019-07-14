@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import styles from "./Left.module.css";
 import {
   FiClipboard,
   FiDownload,
@@ -10,7 +9,7 @@ import {
 } from "react-icons/fi";
 import Resume from "../../../../files/ArthurChenResume.pdf";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-
+import "./Left.scss";
 class SideBar1 extends Component {
   constructor(props) {
     super(props);
@@ -64,34 +63,28 @@ class SideBar1 extends Component {
     return (
       <a
         href={Resume}
-        className={[styles.linkText, styles.link, styles.red].join(" ")}
+        className="left__about-link-text left__about-link left__red"
         download
       >
         <span>RESUME</span>
-        <FiDownload className={styles.textIcon} />
+        <FiDownload className="left__icon_text" />
       </a>
     );
   };
 
   email = () => {
+    let copied =
+      "left__about-link-text left__about-link left__blue left__clipboard";
+    let notCopied = "left__about-link-text left__about-link left__blue";
     return (
       <CopyToClipboard
         onCopy={() => this.setState({ copied: true })}
-        className={
-          this.state.copied
-            ? [
-                styles.linkText,
-                styles.link,
-                styles.clipboard,
-                styles.blue
-              ].join(" ")
-            : [styles.linkText, styles.link, styles.blue].join(" ")
-        }
+        className={this.state.copied ? copied : notCopied}
         text={"ac99@rice.edu"}
       >
-        <div className={styles.linkText}>
+        <div className="left__about-link-text">
           <span>ac99@rice.edu</span>
-          <FiClipboard className={styles.textIcon} />
+          <FiClipboard className="left__icon_text" />
         </div>
       </CopyToClipboard>
     );
@@ -101,70 +94,70 @@ class SideBar1 extends Component {
     return (
       <a
         href="https://www.github.com/achen1738"
-        className={[styles.linkText, styles.link, styles.teal].join(" ")}
+        className="left__about-link-text left__about-link left__teal"
         rel="noopener noreferrer"
         target="_blank"
       >
         <span>GITHUB</span>
-        <FiLink className={styles.textIcon} />
+        <FiLink className="left__icon_text" />
       </a>
     );
   };
 
   render = () => {
-    var resumeStyles = [styles.link, styles.linkable, styles.red];
-    var emailStyles = [styles.link, styles.linkable, styles.blue];
-    var githubStyles = [styles.link, styles.linkable, styles.teal];
+    const linkStyle = "left__about-link-text left__about-link";
+    let resumeStyles = linkStyle + " left__red";
+    let emailStyles = linkStyle + " left__blue";
+    let githubStyles = linkStyle + " left__teal";
     switch (parseInt(this.state.activeIndex)) {
       case 0:
-        resumeStyles.push(styles.activeRed);
+        resumeStyles += " left__active_red";
         break;
       case 1:
-        emailStyles.push(styles.activeBlue);
+        emailStyles += " left__active_blue";
         break;
       case 2:
-        githubStyles.push(styles.activeTeal);
+        githubStyles += " left__active_teal";
         break;
       default:
         break;
     }
 
     return (
-      <div className={styles.container}>
-        <div className={styles.about}>
-          <div className={styles.linksContainer}>
-            <div className={styles.links}>
-              <div className={resumeStyles.join(" ")}>
+      <div className="left">
+        <div className="left__about">
+          <div className="left__about-links-container">
+            <div className="left__about-links">
+              <div className={resumeStyles}>
                 <FiFile
                   data-index={0}
                   onClick={e => this.setIndex(e)}
-                  className={[styles.icon, styles.smallIcon].join(" ")}
+                  className="left__icon left__icon_small"
                 />
               </div>
-
-              <div className={emailStyles.join(" ")}>
+              <div className={emailStyles}>
                 <FiMail
                   data-index={1}
                   onClick={e => this.setIndex(e)}
-                  className={[styles.icon, styles.smallIcon].join(" ")}
+                  className="left__icon left__icon_small"
                 />
               </div>
 
-              <div className={githubStyles.join(" ")}>
+              <div className={githubStyles}>
                 <FiGithub
                   data-index={2}
                   onClick={e => this.setIndex(e)}
-                  className={[styles.icon, styles.smallIcon].join(" ")}
+                  className="left__icon left__icon_small"
                 />
               </div>
             </div>
             {this.renderLinkText()}
           </div>
-          <div className={styles.name}>Arthur Chen</div>
-          <div className={styles.description}>
+          <div className="left__name">Arthur Chen</div>
+          <div className="left__description">
             Currently a rising-senior at{" "}
             <a
-              className={styles.descriptionLink}
+              className="left__description-link"
               href="https://www.rice.edu/"
               rel="noopener noreferrer"
               target="_blank"
@@ -173,7 +166,7 @@ class SideBar1 extends Component {
             </a>{" "}
             studying computer science. Working at{" "}
             <a
-              className={styles.descriptionLink}
+              className="left__description-link"
               href="https://www.ibm.com/us-en/?ar=1"
               rel="noopener noreferrer"
               target="_blank"
@@ -182,7 +175,7 @@ class SideBar1 extends Component {
             </a>{" "}
             this summer in Austin. Here are some things about me.
           </div>
-          <a className={styles.emailBtn} href="mailto:ac99@rice.edu">
+          <a className="left__email" href="mailto:ac99@rice.edu">
             Email Me!
           </a>
         </div>

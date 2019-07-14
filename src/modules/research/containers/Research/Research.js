@@ -1,22 +1,25 @@
 import React, { Component } from "react";
 import { GO, SEM, Cells } from "../../../../images";
-import styles from "./Research.module.css";
 import { FaInfoCircle } from "react-icons/fa";
+import "./Research.scss";
 import ReactTooltip from "react-tooltip";
 import BottomPublications from "../../components/BottomPublications";
 import TopPublications from "../../components/TopPublications";
 import HorizontalPublications from "../../components/HorizontalPublications";
-
 class Research extends Component {
   state = {};
   render() {
     let width = window.innerWidth;
     return (
       <>
-        <div className={styles.imageContainer}>
-          <div className={[styles.researchImage, styles.left].join(" ")}>
+        <div className="research__image">
+          <div className="research__image_research research__image_left">
             <img src={SEM} alt="SEM" />
-            <FaInfoCircle data-tip data-for="SEM" className={styles.topLeft} />
+            <FaInfoCircle
+              data-tip
+              data-for="SEM"
+              className="research__top-left"
+            />
             <ReactTooltip place="right" id="SEM">
               <span>Scanning Electron Microscopy of Graphene</span>
               <br />
@@ -24,21 +27,22 @@ class Research extends Component {
             </ReactTooltip>
             {width > 480 ? <TopPublications /> : null}
           </div>
-          <div className={[styles.middleImageContainer].join(" ")}>
-            <div className={[styles.middleImage].join(" ")}>
+          <div className="research__image_middle-container">
+            <div className="research__image_middle">
               <img src={GO} alt="Graphene Oxide" />
-              <FaInfoCircle data-tip data-for="go" className={styles.center} />
-              <ReactTooltip place="right" id="go">
-                <span>Chemical Structure of Graphene Oxide</span>
-              </ReactTooltip>
+              <div className="research__center">
+                <ReactTooltip place="right" id="go">
+                  <span>Chemical Structure of Graphene Oxide</span>
+                </ReactTooltip>
+              </div>
             </div>
           </div>
-          <div className={[styles.researchImage, styles.right].join(" ")}>
-            <img className={[].join(" ")} src={Cells} alt="Cells with Pt GO" />
+          <div className="research__image_research research__image_right">
+            <img src={Cells} alt="Cells with Pt GO" />
             <FaInfoCircle
               data-tip
               data-for="cells"
-              className={styles.bottomRight}
+              className="research__bottom-right"
             />
             <ReactTooltip place="left" id="cells">
               <span>Dermal Fibroblast Cells plated with Graphene.</span>

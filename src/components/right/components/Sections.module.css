@@ -3,17 +3,3 @@
   padding: 7vh 3.5vw;
   width: 100%;
 }
-
-.innerCard {
-  color: white;
-}
-
-.numWork {
-  margin-bottom: 4vh;
-  text-shadow: 1px 1px 2px black;
-}
-
-.description {
-  margin-top: 4vh;
-  text-shadow: 1px 1px 2px black;
-}

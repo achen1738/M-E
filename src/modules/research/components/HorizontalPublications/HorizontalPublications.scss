@@ -1,0 +1,25 @@
+.horizontal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5vw;
+  grid-row-gap: 1vh;
+  margin-top: 2vh;
+
+  & > div {
+    font-size: 12px;
+  }
+
+  &__publication {
+    display: flex;
+    justify-content: center;
+
+    & > a {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      padding: 0.5vh 1vw;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+  }
+}

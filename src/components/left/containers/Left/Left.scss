@@ -1,0 +1,165 @@
+.left {
+  position: fixed;
+  width: 40%;
+  height: 100%;
+  background-color: #fafafa;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fafafa),
+    to(#fafafa)
+  );
+  background-image: linear-gradient(180deg, #fafafa, #fafafa);
+  box-shadow: -2px 0px 10px black;
+
+  &__about {
+    position: absolute;
+    left: 85px;
+    right: 0px;
+    bottom: 15%;
+    width: 65%;
+    font-style: "Montserrat";
+    color: #333333;
+
+    &-links {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &-container {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      color: #4a4a4a;
+
+      &-text {
+        display: flex;
+        align-items: center;
+        font-size: 23px;
+        margin-left: 0.25vw;
+        border-bottom: 1px solid black;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1050px) {
+    & {
+      position: static;
+      width: 100%;
+    }
+
+    &__about {
+      position: static;
+      width: 100%;
+      padding: 6vh 6vw;
+    }
+  }
+
+  &__name {
+    font-size: 40px;
+    margin-top: 1.5vh;
+  }
+
+  &__description {
+    margin-top: 2vh;
+    font-size: 16px;
+    line-height: 24px;
+
+    &-link {
+      color: #0084ff;
+      border-bottom: 1px solid #0084ff;
+    }
+  }
+
+  &__email {
+    margin-top: 3vh;
+    padding: 2vh 2vw;
+    color: white;
+    background-color: #0084ff;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    border-radius: 2vh;
+  }
+
+  &__active {
+    &_red {
+      color: rgb(255, 52, 52);
+    }
+
+    &_blue {
+      color: rgb(29, 134, 255);
+    }
+
+    &_teal {
+      color: rgb(255, 166, 0);
+    }
+  }
+
+  &__red:hover {
+    color: rgb(255, 52, 52);
+  }
+
+  &__blue:hover {
+    color: rgb(29, 134, 255);
+  }
+
+  &__teal:hover {
+    color: rgb(255, 166, 0);
+  }
+
+  &__linkable:hover {
+    cursor: pointer;
+  }
+
+  &__icon {
+    line-height: 0;
+    margin-right: 0.75vw;
+
+    &_text {
+      margin-left: 0.25vw;
+    }
+
+    &_small {
+      font-size: 33px;
+    }
+
+    &_big {
+      font-size: 40px;
+    }
+  }
+
+  &__clipboard {
+    position: relative;
+    transition: all 0.2s ease-out;
+
+    &::after {
+      content: "Copied!";
+      display: block;
+      position: absolute;
+      transform: scale(0);
+      padding: 1em;
+      background-color: #3e3e3e;
+      border-radius: 3px;
+      font-size: 12px;
+      bottom: 0;
+      left: 30%;
+      line-height: 1.5;
+      transition: transform ease-out 100ms, bottom ease-out 100ms;
+      color: white;
+    }
+
+    &::after {
+      transform: scale(1);
+      bottom: 90%;
+    }
+  }
+}

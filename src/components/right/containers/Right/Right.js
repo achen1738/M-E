@@ -1,47 +1,41 @@
 import React, { Component } from "react";
-import styles from "./Right.module.css";
-
 import OuterSection from "../../components/OuterSection";
 import Research from "../../../../modules/research/containers/Research";
 import Work from "../../../../modules/work/containers/Work";
 import Lanes from "../../../../modules/lanes/components/Lanes";
 import Skills from "../../../../modules/skills/containers/Skills";
-
+import "./Right.scss";
 class Content extends Component {
   state = {};
   render() {
     return (
-      <div className={styles.container}>
+      <div className="right">
         <OuterSection
-          color={styles.teal}
+          color="right__teal"
           numWork={".00 - Skills"}
           content={<Skills />}
           description={"Coding Languages and my Experience"}
         />
         <OuterSection
-          color={styles.mediumBlue}
+          color="right__blue"
           numWork={".01 - Work Experience"}
           content={<Work />}
           description={"Internships and Full-Time"}
         />
         <OuterSection
-          color={styles.mediumPurple}
+          color="right__purple"
           numWork={".02 - Research and Publications"}
           content={<Research />}
           description={"Materials Science Research at Stony Brook University"}
         />
         <OuterSection
-          color={styles.black}
+          color="right__black"
           numWork={".03 - Lanes.gg"}
           content={<Lanes />}
           description={
             "Data Analysis of Individual Matches for League of Legends."
           }
         />
-        {/* <OuterCard
-          color={styles.brightRed}
-          description={"Kernel"}
-        /> */}
       </div>
     );
   }

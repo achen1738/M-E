@@ -1,0 +1,13 @@
+.inner {
+  color: white;
+
+  &__work {
+    margin-bottom: 4vh;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  &__description {
+    margin-top: 4vh;
+    text-shadow: 1px 1px 2px black;
+  }
+}

@@ -1,30 +1,29 @@
 import React, { Component } from "react";
-import styles from "./Work.module.css";
 import { FiCircle } from "react-icons/fi";
-
+import "./Work.scss";
 class Work extends Component {
   state = {};
   render() {
     return (
-      <div className={styles.container}>
-        <div className={styles.timelineContainer}>
+      <div className="work">
+        <div className="work__timeline">
           <span />
-          <div className={styles.event}>
-            <div className={[styles.date, styles.top].join(" ")}>
-              <FiCircle className={styles.circle} />
-              <span className={styles.topText}>May, 2019</span>
+          <div className="work__event ">
+            <div className="work__event-date work__event-top">
+              <FiCircle className="work__event-circle" />
+              <span className="work__event-date">May, 2019</span>
             </div>
-            <div className={styles.eventContent}>
+            <div className="work__event-content">
               <span />
-              <div className={styles.eventTitle}>IBM</div>
-              <div className={styles.eventDescription}>
+              <div className="work__event-title">IBM</div>
+              <div className="work__event-description">
                 Full stack developer working on IBM Cloud microservices based
                 infrastructure technologies to support IBM Analytics products
               </div>
             </div>
-            <div className={[styles.date, styles.bottom].join(" ")}>
-              <FiCircle className={styles.circle} />
-              <span className={styles.bottomText}>Aug, 2019</span>
+            <div className="work__event-date work__event-bottom">
+              <FiCircle className="work__event-circle" />
+              <span className="work__event-date">Aug, 2019</span>
             </div>
           </div>
           <span />

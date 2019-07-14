@@ -1,59 +1,48 @@
 import React, { Component } from "react";
-import styles from "./HorizontalPublications.module.css";
 import { FaArrowRight } from "react-icons/fa";
+import "./HorizontalPublications.scss";
 
 class HorizontalPublications extends Component {
-  state = {};
-  render() {
-    return (
-      <div className={styles.container}>
-        <div className={[styles.publication].join(" ")}>
-          <a
-            className={styles.publication}
-            href="https://www.researchgate.net/publication/285982063_Optimizing_Reduced_Graphene_Oxide_with_Metallic_Nanoparticles_for_Increasing_the_Efficiency_of_Proton_Exchange_Membrane_Fuel_Cells"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Hydrogen Fuel Cell
-            <FaArrowRight className={styles.arrowIcon} />
-          </a>
-        </div>
-        <div className={[styles.publication].join(" ")}>
-          <a
-            className={styles.publication}
-            href="https://www.researchgate.net/publication/292950631_Synthesis_and_Characterization_of_Partially_Reduced_Graphene_Oxide_and_Platinum_and_Gold_Partially_Reduced_Graphene_Oxide"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Graphene Synthesis
-            <FaArrowRight className={styles.arrowIcon} />
-          </a>
-        </div>
+  state = {
+    links: [
+      {
+        href:
+          "https://www.researchgate.net/publication/285982063_Optimizing_Reduced_Graphene_Oxide_with_Metallic_Nanoparticles_for_Increasing_the_Efficiency_of_Proton_Exchange_Membrane_Fuel_Cells",
+        text: "Hydrogen Fuel Cell"
+      },
+      {
+        href:
+          "https://www.researchgate.net/publication/292950631_Synthesis_and_Characterization_of_Partially_Reduced_Graphene_Oxide_and_Platinum_and_Gold_Partially_Reduced_Graphene_Oxide",
+        text: "            Graphene Synthesis            "
+      },
+      {
+        href:
+          "https://www.researchgate.net/publication/292950631_Synthesis_and_Characterization_of_Partially_Reduced_Graphene_Oxide_and_Platinum_and_Gold_Partially_Reduced_Graphene_Oxide",
+        text: "            Skin and Bacterial Cells              "
+      },
+      {
+        href:
+          "https://www.researchgate.net/publication/283154112_Creating_Metal_Nanoparticle-Reduced_Graphene_Oxide_Sheets_by_a_Simple_Desktop_Method",
+        text: "            Graphene-Nanoparticles              "
+      }
+    ]
+  };
 
-        <div className={[styles.publication].join(" ")}>
-          <a
-            className={styles.publication}
-            href="https://www.researchgate.net/publication/290508359_The_Effect_of_Graphene_OxideReduced_Graphene_Oxide_Functionalized_with_Metal_Nanoparticles_on_Dermal_Bacterial_and_CancerousNon-Cancerous_Epidermal_Cells"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Skin and Bacterial Cells
-            <FaArrowRight className={styles.arrowIcon} />
+  renderPublications = () => {
+    return this.state.links.map((link, index) => {
+      return (
+        <div key={index} className="horizontal__publication">
+          <a href={link.href} rel="noopener noreferrer" target="_blank">
+            {link.text}
+            <FaArrowRight />
           </a>
         </div>
-        <div className={styles.publication}>
-          <a
-            className={styles.publication}
-            href="https://www.researchgate.net/publication/283154112_Creating_Metal_Nanoparticle-Reduced_Graphene_Oxide_Sheets_by_a_Simple_Desktop_Method"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Graphene-Nanoparticles
-            <FaArrowRight className={styles.arrowIcon} />
-          </a>
-        </div>
-      </div>
-    );
+      );
+    });
+  };
+
+  render() {
+    return <div className="horizontal">{this.renderPublications()}</div>;
   }
 }
 
