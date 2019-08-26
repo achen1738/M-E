@@ -76,6 +76,8 @@ class SkillCard extends Component {
       bodyStyle,
       exp
     } = this.props;
+
+    console.log(backgroundColor);
     return (
       <div key={index} data-index={index} className="skills__card">
         <div className={[styles.cardColor, backgroundColor].join(" ")} />

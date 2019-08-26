@@ -192,7 +192,7 @@ class SideBar1 extends Component {
             >
               @Rice University
             </a>{" "}
-            studying computer science. Working at{" "}
+            studying computer science. Worked at{" "}
             <a
               className="left__description-link"
               href="https://www.ibm.com/us-en/?ar=1"
