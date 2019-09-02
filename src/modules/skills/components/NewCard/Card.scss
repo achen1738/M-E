@@ -1,15 +1,16 @@
 .skills {
   &__card {
     background-color: #fafafa;
-    border-left: 5px solid #030301;
+    border-left: 5px solid #bfdaf3;
     padding: 10px 10px 18px;
     color: black;
+    border-radius: 3px;
     box-shadow: 0px 3px 4px 0px black;
     &--title {
       font-weight: 600;
       font-size: 16px;
       padding-bottom: 2px;
-      border-bottom: 1px solid #030301;
+      border-bottom: 1px solid #bfdaf3;
     }
 
     &--text {
