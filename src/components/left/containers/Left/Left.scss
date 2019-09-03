@@ -13,22 +13,27 @@
   );
   background-image: linear-gradient(180deg, #fafafa, #fafafa);
   box-shadow: -2px 0px 10px black;
-
+  display: flex;
+  flex-direction: column-reverse;
   &__about {
-    position: absolute;
-    left: 85px;
-    right: 0px;
-    bottom: 15%;
-    width: 65%;
-    font-style: "Montserrat";
-    color: #333333;
+    padding-left: 40px;
+    padding-bottom: 15%;
 
     &-links {
       @extend %flex-middle;
       position: relative;
 
+      @media only screen and (max-width: 391px) {
+        padding-bottom: 5px;
+      }
+
       &-container {
         @extend %flex-middle;
+
+        @media only screen and (max-width: 391px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
       }
     }
 
@@ -105,6 +110,10 @@
     &_purple {
       color: rgb(108, 10, 182);
     }
+
+    &_green {
+      color: #56d39b;
+    }
   }
 
   &__red:hover {
@@ -121,6 +130,10 @@
 
   &__purple:hover {
     color: rgb(108, 10, 182);
+  }
+
+  &__green:hover {
+    color: #56d39b;
   }
 
   &__linkable:hover {

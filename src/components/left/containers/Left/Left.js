@@ -6,7 +6,8 @@ import {
   FiFile,
   FiMail,
   FiLink,
-  FiCodepen
+  FiCodepen,
+  FiLinkedin
 } from "react-icons/fi";
 import Resume from "../../../../files/ArthurChenResume.pdf";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -21,14 +22,9 @@ class SideBar1 extends Component {
       copied: false
     };
 
-    const resume = this.resume();
-    const email = this.email();
-    const github = this.github();
-    const code = this.code();
     this.state = {
       activeIndex: 0,
       copySuccess: "",
-      linkComponent: [resume, email, github, code],
       copied: false
     };
   }
@@ -48,18 +44,20 @@ class SideBar1 extends Component {
       case 0:
         return this.resume();
       case 1:
-        return this.email();
+        return this.linkedin();
       case 2:
-        return this.github();
+        return this.email();
       case 3:
+        return this.github();
+      case 4:
         return this.code();
       default:
         return;
     }
   };
 
-  setIndex = e => {
-    this.setState({ activeIndex: e.currentTarget.getAttribute("data-index") });
+  setIndex = activeIndex => {
+    this.setState({ activeIndex, copied: false });
   };
 
   resume = () => {
@@ -78,7 +76,7 @@ class SideBar1 extends Component {
   email = () => {
     let copied =
       "left__about-link-text left__about-link left__blue left__clipboard";
-    let notCopied = "left__about-link-text left__about-link left__blue";
+    let notCopied = "left__about-link-text left__about-link left__green";
     return (
       <CopyToClipboard
         onCopy={() => this.setState({ copied: true })}
@@ -121,23 +119,41 @@ class SideBar1 extends Component {
     );
   };
 
+  linkedin = () => {
+    return (
+      <a
+        href="https://www.linkedin.com/in/arthur-chen-5402b9122/"
+        className="left__about-link-text left__about-link left__orange"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span>LinkedIn</span>
+        <FiLink className="left__icon_text" />
+      </a>
+    );
+  };
+
   render = () => {
     const linkStyle = "left__about-link";
     let resumeStyles = linkStyle + " left__red";
-    let emailStyles = linkStyle + " left__blue";
-    let githubStyles = linkStyle + " left__orange";
+    let linkedInStyles = linkStyle + " left__orange";
+    let emailStyles = linkStyle + " left__green";
+    let githubStyles = linkStyle + " left__blue";
     let codeStyles = linkStyle + " left__purple";
     switch (parseInt(this.state.activeIndex)) {
       case 0:
         resumeStyles += " left__active_red";
         break;
       case 1:
-        emailStyles += " left__active_blue";
+        linkedInStyles += " left__active_orange";
         break;
       case 2:
-        githubStyles += " left__active_orange";
+        emailStyles += " left__active_green";
         break;
       case 3:
+        githubStyles += " left__active_blue";
+        break;
+      case 4:
         codeStyles += " left__active_purple";
         break;
       default:
@@ -151,30 +167,32 @@ class SideBar1 extends Component {
             <div className="left__about-links">
               <div className={resumeStyles}>
                 <FiFile
-                  data-index={0}
-                  onClick={e => this.setIndex(e)}
+                  onClick={() => this.setIndex(0)}
+                  className="left__icon left__icon_small"
+                />
+              </div>
+              <div className={linkedInStyles}>
+                <FiLinkedin
+                  onClick={() => this.setIndex(1)}
                   className="left__icon left__icon_small"
                 />
               </div>
               <div className={emailStyles}>
                 <FiMail
-                  data-index={1}
-                  onClick={e => this.setIndex(e)}
+                  onClick={() => this.setIndex(2)}
                   className="left__icon left__icon_small"
                 />
               </div>
 
               <div className={githubStyles}>
                 <FiGithub
-                  data-index={2}
-                  onClick={e => this.setIndex(e)}
+                  onClick={() => this.setIndex(3)}
                   className="left__icon left__icon_small"
                 />
               </div>
               <div className={codeStyles}>
                 <FiCodepen
-                  data-index={3}
-                  onClick={e => this.setIndex(e)}
+                  onClick={() => this.setIndex(4)}
                   className="left__icon left__icon_small"
                 />
               </div>
