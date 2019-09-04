@@ -221,7 +221,7 @@ class SideBar1 extends Component {
             </a>{" "}
             this summer in Austin. Here are some things about me.
           </div>
-          <a className="left__email" href="mailto:ac99@rice.edu">
+          <a className="left__email" href="mailto:achen1738@gmail.com">
             Email Me!
           </a>
         </div>
