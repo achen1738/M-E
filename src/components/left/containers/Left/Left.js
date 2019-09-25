@@ -81,10 +81,10 @@ class SideBar1 extends Component {
       <CopyToClipboard
         onCopy={() => this.setState({ copied: true })}
         className={this.state.copied ? copied : notCopied}
-        text={"ac99@rice.edu"}
+        text={"achen1738gmail.com"}
       >
         <div className="left__about-link-text">
-          <span>ac99@rice.edu</span>
+          <span>achen1738gmail.com</span>
           <FiClipboard className="left__icon_text" />
         </div>
       </CopyToClipboard>
