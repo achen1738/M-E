@@ -9,7 +9,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.6",
     "react-icons": "^3.6.1",
-    "react-scripts": "3.0.0",
+    "react-scripts": "3.4.4",
     "react-tooltip": "^3.10.0"
   },
   "scripts": {
